@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, height=device-height,user-scalable=no, initial-scale=1.0">
+    <title>Simple ToDo-List</title>
+    <link rel="stylesheet" href="CSS/CSS.css" />
+    
+</head>
+<body>
+
+     <!--
+        onfocus 추가
+    -->
+    <form id="login-form" class="hidden">
+        <input 
+        required
+        maxlength="15"
+        type="text" placeholder="이름을 입력해주세요." 
+        onfocus="this.placeholder = ''" 
+        onblur="this.placeholder='이름을 입력해주세요.'">
+        <button>저장</button>
+    </form>
+
+    <h2 id="clock">00:00:00</h2>
+
+    <h1 id="greeting" class="hidden"></h1>
+    
+    <!-- 임의 추가 -->
+    <h1 id="middle">-오늘의 논어-</h1>
+
+    <form id="todo-form">
+        <input 
+        required
+        type="text" placeholder="할 일 메모하기" 
+        onfocus="this.placeholder = ''" 
+        onblur="this.placeholder='할 일 메모하기.'">
+    </form>
+
+    <ul id="todo-list">
+    </ul>
+
+    <div id="quote">
+        <span></span>
+        <span></span>
+    </div>
+
+    <div id="weather">
+        <span></span>
+        <span></span>
+    </div>
+
+    <script src="JS/Form.js"></script>
+    <script src="JS/Clock.js"></script>
+    <script src="JS/Quotes.js"></script>
+    <script src="JS/Backgroud.js"></script>
+    <script src="JS/Todo.js"></script>
+    <script src="JS/weather.js"></script>
+</body>
+</html>
