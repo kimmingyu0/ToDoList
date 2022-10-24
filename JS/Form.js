@@ -7,6 +7,14 @@ const USERNAME_KEY = "username";
 
 function onLoginBtnSubmit(event){
     event.preventDefault();
+
+    //공백추가 후 저장시 입력불가
+
+    if(loginInput.value.trim().length===0){
+        alert("이름을 입력해주세요!");
+        return;
+    }
+    
     loginForm.classList.add(HIDDEN_CLASSNAME);
     const username = loginInput.value;
     localStorage.setItem(USERNAME_KEY, username);
